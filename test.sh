@@ -1,0 +1,4 @@
+#!/BIN/BASH 
+
+  cat 1.txt
+  cat 2.txt 
