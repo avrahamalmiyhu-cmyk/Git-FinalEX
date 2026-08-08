@@ -27,9 +27,7 @@ jobs:
         run: cat * 
 
       - name: Run test script 
-        run: | 
-          chmod +x test.sh  
-          ./test.sh 
+        run: bash test.sh           
 
   job-3: 
     runs-on: ubuntu-latest 
