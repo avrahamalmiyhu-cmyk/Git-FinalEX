@@ -7,17 +7,17 @@ on:
      - main 
 
 
- workflow_dispatch: 
+   workflow_dispatch: 
 
 
- jobs: 
+   jobs: 
     job-1:
     
     runs-on: ubuntu-latest 
     steps: 
      
     -name: multiline commad 
-  -run: | 
+   -run: | 
     echo "Hello"
     cat /etc/os-release
     echo "Commit SHA: ${{ github.sha }}" 
@@ -27,11 +27,11 @@ on:
  
  
     steps:
-   - name: show all the file 
+     - name: show all the file 
   
-  - uses: actions/checkout@v3 
+     - uses: actions/checkout@v3 
   
-  -run:   cat * 
+   -run:   cat * 
 
    -name : run test script 
    -run: | 
