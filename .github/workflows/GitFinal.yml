@@ -1,0 +1,58 @@
+name: Git-Final 
+ 
+on:
+   
+   push: 
+     branches: 
+     - main 
+
+
+ workflow_dispatch: 
+
+
+ jobs: 
+    job-1:
+    
+    runs-on: ubuntu-latest 
+    steps: 
+     
+    -name: multiline commad 
+  -run: | 
+    echo "Hello"
+    cat /etc/os-release
+    echo "Commit SHA: ${{ github.sha }}" 
+
+   job-2: 
+    runs-on: ubuntu-latest 
+ 
+ 
+    steps:
+   - name: show all the file 
+  
+  - uses: actions/checkout@v3 
+  
+  -run:   cat * 
+
+   -name : run test script 
+   -run: | 
+    chmod +x test.sh  
+    ./test.sh 
+
+   job-3: 
+    
+    runs-on: ubuntu-latest 
+    steps:
+    -name: personal details 
+    env: 
+     "First_name: Avi" 
+    run: | 
+     "Last_name : Almiyhu"
+    
+     echo " First_name = {{ env.First_name }}"
+     echo "Last_names: $Last_name "
+     echo  " phone Number : ${{ secrets.PHONE_NUMBER }} " 
+   
+
+     
+  
+
