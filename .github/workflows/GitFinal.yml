@@ -1,27 +1,4 @@
 name: Git-Final 
- 
-on:
-   
-   push: 
-     branches: 
-     - main 
-
-
-   workflow_dispatch: 
-
-
-   jobs: 
-    job-1:
-    
-    runs-on: ubuntu-latest 
-    steps: 
-     
-    -name: multiline commad 
-   -run: | 
-    echo "Hello"
-    cat /etc/os-release
-    echo "Commit SHA: ${{ github.sha }}" 
-name: Git-Final 
 
 on:
   push: 
